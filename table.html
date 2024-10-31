@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<h3>Тепмература Примрья</h3>
+<a href=main.html>Вернуться</a>
+</head>
+<body>
+ <details>
+            <summary>График</summary>
+            <form action="#" method="get">
+                <table>
+                    <tr>
+                        <td>
+                            <fieldset>
+                                <legend>X</legend>
+                                
+                                <p>
+                                    <input type="radio" id="ox-season" name="ox-axis" value="season">
+                                    <label for="ox-date">Время года</label><br>
+                                    
+                                    <input type="radio" id="ox-month" name="ox-axis" value="month">
+                                    <label for="ox-temp">Месяц</label><br>
+                                    
+                                 
+                                </p>
+                            </fieldset>
+                        </td>
+                        <td>
+                            <fieldset>
+                                <legend>Результат</legend>
+                                
+                                <p>
+                                    <input type="checkbox" id="show-patents" name="show-min" value="t_min">
+                                    <label for="show-patents">Температура(мин)</label><br>
+                                    
+                                    <input type="checkbox" id="show-revenue_max" name="show-max" value="t_max">
+                                    <label for="show-revenue_max">Температура(макс)</label><br>
+                                    
+                                    
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Построить график">
+            </form>
+        </details>
+
+<details>
+<summary>Фильтр</summary>
+    <label for="graph">Выберите параметры для поиска:</label>
+	<p>Время года: <input type="text"></p>
+	<p>Месяц: <input type="text"></p>
+	<p>Температура от: <input type="text"> до: <input type="text"></p>
+	 <button name="search">искать</button>
+</details>
+
+<details>
+<summary>сортировка</summary>
+    <label for="Sort">Выберите параметры для сортировки:</label>
+	<p>Первый уровень <select id="1_lvl" name="1_lvl">
+	<option value="no">Нет</option>
+    <option value="temp">Время года</option>
+    <option value="os">Месяц</option>
+    <option value="wind">Температура</option>
+	
+  </select> по убыванию? <input type="checkbox"></p>
+  
+	<p>Второй уровень <select id="2_lvl" name="2_lvl">
+    <option value="no">Нет</option>
+    <option value="temp">Время года</option>
+    <option value="os">Месяц</option>
+    <option value="wind">Температура</option>
+  </select> по убыванию? <input type="checkbox"></p>
+  
+	<p>Третий уровень <select id="3_lvl" name="3_lvl">
+  <option value="no">Нет</option>
+    <option value="temp">Время года</option>
+    <option value="os">Месяц</option>
+    <option value="wind">Температура</option>
+  </select> по убыванию? <input type="checkbox"></p>
+
+	 <button name="sort">искать</button>
+</details>
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Время года</th>
+            <th>Месяц</th>
+            <th>Температура (°C)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Весна</td>
+            <td>Март</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Апрель</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Май</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июнь</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июль</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Август</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Сентябрь</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Октябрь</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Ноябрь</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Декабрь</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Январь</td>
+            <td>-2</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Февраль</td>
+            <td>-1</td>
+        </tr>
+		 <tr>
+            <td>Весна</td>
+            <td>Март</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Апрель</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Май</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июнь</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июль</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Август</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Сентябрь</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Октябрь</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Ноябрь</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Декабрь</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Январь</td>
+            <td>-6</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Февраль</td>
+            <td>-4</td>
+        </tr>
+		 <tr>
+            <td>Весна</td>
+            <td>Март</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Апрель</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Май</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июнь</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июль</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Август</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Сентябрь</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Октябрь</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Ноябрь</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Декабрь</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Январь</td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Февраль</td>
+            <td>-6</td>
+        </tr>
+		 <tr>
+            <td>Весна</td>
+            <td>Март</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Апрель</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Весна</td>
+            <td>Май</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июнь</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Июль</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>Лето</td>
+            <td>Август</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Сентябрь</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Октябрь</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Осень</td>
+            <td>Ноябрь</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Декабрь</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Январь</td>
+            <td>-9</td>
+        </tr>
+        <tr>
+            <td>Зима</td>
+            <td>Февраль</td>
+            <td>-5</td>
+        </tr>
+    </tbody>
+</table>
+		
+		
+	
+</body>
+</html>
